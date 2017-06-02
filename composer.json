@@ -16,7 +16,10 @@
         "php": ">=5.4.0"
     },
     "autoload": {
-        "psr-4": {"zmxy\\": "zmxy"},
+        "psr-4": {
+            "zmxy\\": "",
+            "zmxy\\api\\": "api/"
+        },
         "files": ["ZmopClient.php"]
     }
 }
