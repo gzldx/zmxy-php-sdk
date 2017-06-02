@@ -10,21 +10,21 @@ use \zmxy\api\ZhimaCustomerCertificationInitializeRequest;
 use \zmxy\api\ZhimaCustomerCertificationCertifyRequest;
 
 --------- function start ----------
-$client = new \zmxy\ZmopClient(self::$gatewayUrl, self::$appId, self::$charset, self::$privateKeyFilePath, self::$zhiMaPublicKeyFilePath);  
-$request = new \zmxy\api\ZhimaCustomerCertificationInitializeRequest();  
-$request->setPlatform('zmop');  
-$request->setTransactionId(self::generateTransactionId());  
-$request->setProductCode('w1010100000000002978');  
-$request->setBizCode('FACE');
-$request->setIdentityParam("{\"identity_type\":\"CERT_INFO\",\"cert_type\":\"IDENTITY_CARD\",\"cert_name\":\"收委\",\"cert_no\":\"260104197909275964\"}");
-$request->setExtBizParam("{}");
-$init = (array)$client->execute($request);
-if(!$init || !$init['biz_no']){
-    return false;
-}
-$request2 = new \zmxy\api\ZhimaCustomerCertificationCertifyRequest();
-$request2->setBizNo($init['biz_no']);
-$request2->setReturnUrl($callbackUrl);
-//生成认证url
-$url = $client->generatePageRedirectInvokeUrl($request2);
+$client = new \zmxy\ZmopClient(self::$gatewayUrl, self::$appId, self::$charset, self::$privateKeyFilePath, self::$zhiMaPublicKeyFilePath);<br/>
+$request = new \zmxy\api\ZhimaCustomerCertificationInitializeRequest();<br/>
+$request->setPlatform('zmop');<br/>
+$request->setTransactionId(self::generateTransactionId());<br/>  
+$request->setProductCode('w1010100000000002978');<br/>  
+$request->setBizCode('FACE');<br/>
+$request->setIdentityParam("{\"identity_type\":\"CERT_INFO\",\"cert_type\":\"IDENTITY_CARD\",\"cert_name\":\"收委\",\"cert_no\":\"260104197909275964\"}");<br/>
+$request->setExtBizParam("{}");<br/>
+$init = (array)$client->execute($request);<br/>
+if(!$init || !$init['biz_no']){<br/>
+    return false;<br/>
+}<br/>
+$request2 = new \zmxy\api\ZhimaCustomerCertificationCertifyRequest();<br/>
+$request2->setBizNo($init['biz_no']);<br/>
+$request2->setReturnUrl($callbackUrl);<br/>
+//生成认证url<br/>
+$url = $client->generatePageRedirectInvokeUrl($request2);<br/>
 --------- function end ----------
