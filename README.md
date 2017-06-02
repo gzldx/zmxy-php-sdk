@@ -5,9 +5,9 @@
 
 https://b.zmxy.com.cn/technology/openDoc.htm?relInfo=CERTIFICATION_QUICK_START
 
-use \zmxy\ZmopClient;
-use \zmxy\api\ZhimaCustomerCertificationInitializeRequest;
-use \zmxy\api\ZhimaCustomerCertificationCertifyRequest;
+use \zmxy\ZmopClient;<br/>
+use \zmxy\api\ZhimaCustomerCertificationInitializeRequest;<br/>
+use \zmxy\api\ZhimaCustomerCertificationCertifyRequest;<br/>
 
 --------- function start ----------<br/>
 $client = new \zmxy\ZmopClient(self::$gatewayUrl, self::$appId, self::$charset, self::$privateKeyFilePath, self::$zhiMaPublicKeyFilePath);<br/>
