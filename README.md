@@ -9,7 +9,7 @@ use \zmxy\ZmopClient;
 use \zmxy\api\ZhimaCustomerCertificationInitializeRequest;
 use \zmxy\api\ZhimaCustomerCertificationCertifyRequest;
 
---------- function start ----------
+--------- function start ----------<br/>
 $client = new \zmxy\ZmopClient(self::$gatewayUrl, self::$appId, self::$charset, self::$privateKeyFilePath, self::$zhiMaPublicKeyFilePath);<br/>
 $request = new \zmxy\api\ZhimaCustomerCertificationInitializeRequest();<br/>
 $request->setPlatform('zmop');<br/>
