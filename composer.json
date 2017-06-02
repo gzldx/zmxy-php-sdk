@@ -19,7 +19,6 @@
         "psr-4": {
             "zmxy\\": "",
             "zmxy\\api\\": "api/"
-        },
-        "files": ["ZmopClient.php"]
+        }
     }
 }
