@@ -17,6 +17,6 @@
     },
     "autoload": {
         "psr-4": {"zmxy\\": "zmxy"},
-        "files": ["zmxy/ZmopClient.php"]
+        "files": ["ZmopClient.php"]
     }
 }
