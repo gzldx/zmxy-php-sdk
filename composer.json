@@ -1,0 +1,22 @@
+{
+    "name": "gzldx/zmxy-php-sdk",
+    "description": "基于composer的php-sdk",
+    "keywords": ["zmxy", "sdk"],
+    "homepage": "https://github.com/gzldx",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Xing Lao",
+            "email": "ldxing999@gmail.com",
+            "homepage": "https://github.com/gzldx"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {"zmxy\\": "zmxy"},
+        "files": ["zmxy/ZmopClient.php"]
+    }
+}
