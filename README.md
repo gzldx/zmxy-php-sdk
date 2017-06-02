@@ -9,11 +9,11 @@ use \zmxy\ZmopClient;<br/>
 use \zmxy\api\ZhimaCustomerCertificationInitializeRequest;<br/>
 use \zmxy\api\ZhimaCustomerCertificationCertifyRequest;<br/>
 
---------- function start ----------<br/>
-$client = new \zmxy\ZmopClient(self::$gatewayUrl, self::$appId, self::$charset, self::$privateKeyFilePath, self::$zhiMaPublicKeyFilePath);<br/>
-$request = new \zmxy\api\ZhimaCustomerCertificationInitializeRequest();<br/>
+--------- function start ----------  
+$client = new \zmxy\ZmopClient(self::$gatewayUrl, self::$appId, self::$charset, self::$privateKeyFilePath, self::$zhiMaPublicKeyFilePath);  
+$request = new \zmxy\api\ZhimaCustomerCertificationInitializeRequest();  
 $request->setPlatform('zmop');<br/>
-$request->setTransactionId(self::generateTransactionId());<br/>  
+$request->setTransactionId(self::generateTransactionId());  
 $request->setProductCode('w1010100000000002978');<br/>  
 $request->setBizCode('FACE');<br/>
 $request->setIdentityParam("{\"identity_type\":\"CERT_INFO\",\"cert_type\":\"IDENTITY_CARD\",\"cert_name\":\"收委\",\"cert_no\":\"260104197909275964\"}");<br/>
@@ -24,7 +24,7 @@ if(!$init || !$init['biz_no']){<br/>
 }<br/>
 $request2 = new \zmxy\api\ZhimaCustomerCertificationCertifyRequest();<br/>
 $request2->setBizNo($init['biz_no']);<br/>
-$request2->setReturnUrl($callbackUrl);<br/>
-//生成认证url<br/>
+$request2->setReturnUrl($callbackUrl);  
+//生成认证url  
 $url = $client->generatePageRedirectInvokeUrl($request2);<br/>
 --------- function end ----------
