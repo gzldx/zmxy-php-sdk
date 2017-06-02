@@ -10,11 +10,11 @@ use \zmxy\api\ZhimaCustomerCertificationInitializeRequest;
 use \zmxy\api\ZhimaCustomerCertificationCertifyRequest;
 
 --------- function start ----------
-$client = new \zmxy\ZmopClient(self::$gatewayUrl, self::$appId, self::$charset, self::$privateKeyFilePath, self::$zhiMaPublicKeyFilePath);
-$request = new \zmxy\api\ZhimaCustomerCertificationInitializeRequest();
-$request->setPlatform('zmop');
-$request->setTransactionId(self::generateTransactionId());
-$request->setProductCode('w1010100000000002978');
+$client = new \zmxy\ZmopClient(self::$gatewayUrl, self::$appId, self::$charset, self::$privateKeyFilePath, self::$zhiMaPublicKeyFilePath);  
+$request = new \zmxy\api\ZhimaCustomerCertificationInitializeRequest();  
+$request->setPlatform('zmop');  
+$request->setTransactionId(self::generateTransactionId());  
+$request->setProductCode('w1010100000000002978');  
 $request->setBizCode('FACE');
 $request->setIdentityParam("{\"identity_type\":\"CERT_INFO\",\"cert_type\":\"IDENTITY_CARD\",\"cert_name\":\"收委\",\"cert_no\":\"260104197909275964\"}");
 $request->setExtBizParam("{}");
