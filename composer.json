@@ -1,6 +1,6 @@
 {
-    "name": "gzldx/zmxy-php-sdk",
-    "description": "基于composer的php-sdk",
+    "name": "zmxy/php-sdk",
+    "description": "芝麻信用sdk",
     "keywords": ["zmxy", "sdk"],
     "homepage": "https://github.com/gzldx",
     "type": "library",
