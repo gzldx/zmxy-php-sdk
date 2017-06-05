@@ -34,8 +34,8 @@ use \zmxy\api\ZhimaCustomerCertificationInitializeRequest;
 use \zmxy\api\ZhimaCustomerCertificationCertifyRequest;  
 
 //function start
-$client = new \zmxy\ZmopClient(self::$gatewayUrl, self::$appId, self::$charset, self::$privateKeyFilePath, self::$zhiMaPublicKeyFilePath);  
-$ci_request = new \zmxy\api\ZhimaCustomerCertificationInitializeRequest();  
+$client = new ZmopClient(self::$gatewayUrl, self::$appId, self::$charset, self::$privateKeyFilePath, self::$zhiMaPublicKeyFilePath);  
+$ci_request = new ZhimaCustomerCertificationInitializeRequest();  
 $ci_request->setPlatform('zmop');  
 $ci_request->setTransactionId(self::generateTransactionId());  
 $ci_request->setProductCode('w1010100000000002978');  
@@ -47,7 +47,7 @@ $result = (array)$client->execute($ci_request);
 if(!$result || !$result['biz_no']){
     return false;
 }
-$cc_request = new \zmxy\api\ZhimaCustomerCertificationCertifyRequest();
+$cc_request = new ZhimaCustomerCertificationCertifyRequest();
 $cc_request->setBizNo($result['biz_no']);
 $cc_request->setReturnUrl($callbackUrl);
 //生成认证url
