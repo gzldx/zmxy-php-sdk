@@ -6,12 +6,12 @@
 ###文档路径
 https://b.zmxy.com.cn/technology/openDoc.htm?relInfo=CERTIFICATION_QUICK_START
 
+```  
 use \zmxy\ZmopClient;  
 use \zmxy\api\ZhimaCustomerCertificationInitializeRequest;  
 use \zmxy\api\ZhimaCustomerCertificationCertifyRequest;  
 
-####调用
-```  
+//function start
 $client = new \zmxy\ZmopClient(self::$gatewayUrl, self::$appId, self::$charset, self::$privateKeyFilePath, self::$zhiMaPublicKeyFilePath);  
 $ci_request = new \zmxy\api\ZhimaCustomerCertificationInitializeRequest();  
 $ci_request->setPlatform('zmop');  
