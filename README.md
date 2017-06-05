@@ -6,6 +6,28 @@
 ###文档路径
 https://b.zmxy.com.cn/technology/openDoc.htm?relInfo=CERTIFICATION_QUICK_START
 
+####composer.json
+```
+"repositories": [
+    {
+        "type": "composer",
+        "url": "https://packagist.phpcomposer.com"
+    },
+    {
+        "packagist": false
+    },
+    {
+        "type": "vcs",
+        "url": "https://github.com/gzldx/zmxy-php-sdk"
+    }
+],
+"require": {
+    "zmxy/php-sdk": "dev-master"
+},
+```
+
+####调用
+
 ```  
 use \zmxy\ZmopClient;  
 use \zmxy\api\ZhimaCustomerCertificationInitializeRequest;  
